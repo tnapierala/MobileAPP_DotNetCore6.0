@@ -49,13 +49,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="EX-2\MainPage2.xaml.cs">
+	    <DependentUpon>MainPage2.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="EX-3\MainPage3.xaml.cs">
+	    <DependentUpon>MainPage3.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="MainPage1.xaml.cs">
 	    <DependentUpon>MainPage1.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="CallTranslator.xaml.cs">
+	    <DependentUpon>CallTranslator.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="MainPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="CallTranslator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

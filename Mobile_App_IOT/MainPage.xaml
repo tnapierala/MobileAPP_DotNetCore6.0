@@ -5,25 +5,79 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="15"
-            Padding="20"
+            Spacing="25"
+            Padding="30,0"
             VerticalOptions="Center">
 
-            <Label Text = "Enter a Phoneword" 
-                   FontSize ="20"/>
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
 
-            <Entry x:Name = "PhoneNumberText" 
-                   Text = "1-555-NETMAUI" />
+            <Label
+                Text="Hello, the application launched with Tomek has been succeeded! :D"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center"
+            />
 
-            <Button x:Name = "TranslateButton"
-                    Text = "Translate"
-                    Clicked = "OnTranslate"/>
+            <Label
+                Text="Welcome to .NET Multi-platform App UI by Tomek"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
 
-            <Button x:Name = "CallButton" 
-                    Text = "Call"
-                    IsEnabled = "False"
-                    Clicked = "OnCall"/>
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
 
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="70"
+                Margin="0,30,0,0">
+
+                <Button
+                    x:Name="ButtonViewCallTrans"
+                    Text="Call Translator"
+                    SemanticProperties.Hint="Click to view a call translator"
+                    Clicked="ButtonCallTranslator"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="ButtonViewLoginPage"
+                    Text="Login Page"
+                    Clicked="ButtonViewLogin"
+                    HorizontalOptions="Center" />
+
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="70"
+                Margin="0,30,0,30">
+
+                <Button
+                    x:Name="ButtonViewNotePage"
+                    Text="Notes Page"
+                    Clicked="ButtonNotePage"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="EmptyButton"
+                    Text="EmptyButton"
+                    HorizontalOptions="Center" />
+
+            </StackLayout>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

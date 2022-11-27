@@ -6,49 +6,36 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
     }
+    //First Build App 
+    int count1 = 0;
 
-    string translatedNumber;
-
-    private void OnTranslate(object sender, EventArgs e)
+    private void OnCounterClicked(object sender, EventArgs e)
     {
-        string enteredNumber = PhoneNumberText.Text;
-        translatedNumber = PhonewordTranslator.ToNumber(enteredNumber);
+        count1++;
 
-        if (!string.IsNullOrEmpty(translatedNumber))
-        {
-            CallButton.IsEnabled = true;
-            CallButton.Text = "Call " + translatedNumber;
-        }
+        if (count1 == 1)
+            CounterBtn.Text = $"Clicked {count1} time \nI catch U on clicked button XD";
         else
-        {
-            CallButton.IsEnabled = false;
-            CallButton.Text = "Call";
-        }
+            CounterBtn.Text = $" I catch U on clicked button a {count1} times XD";
+
+        SemanticScreenReader.Announce(CounterBtn.Text);
     }
 
-    async void OnCall(object sender, System.EventArgs e)
+    //Routing
+    private async void ButtonCallTranslator(object sender, EventArgs e)
     {
-        if (await this.DisplayAlert(
-                "Dial a Number",
-                "Would you like to call " + translatedNumber + "?",
-                "Yes",
-                "No"))
-        {
-            try
-            {
-                if (PhoneDialer.Default.IsSupported)
-                    PhoneDialer.Default.Open(translatedNumber);
-            }
-            catch (ArgumentNullException)
-            {
-                await DisplayAlert("Unable to dial", "Phone number was not valid.", "OK");
-            }
-            catch (Exception)
-            {
-                // Other error has occurred.
-                await DisplayAlert("Unable to dial", "Phone dialing failed.", "OK");
-            }
-        }
+        await Shell.Current.GoToAsync(nameof(CallTranslator));
     }
+
+    private async void ButtonViewLogin(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(LoginPage));
+    }
+
+    private async void ButtonNotePage(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(NotePage));
+    }
+
 }
 
