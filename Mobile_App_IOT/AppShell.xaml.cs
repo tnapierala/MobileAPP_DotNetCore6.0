@@ -9,5 +9,7 @@ public partial class AppShell : Shell
 		Routing.RegisterRoute(nameof(CallTranslator), typeof(CallTranslator));
 		Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
 		Routing.RegisterRoute(nameof(NotePage), typeof(NotePage));
-	}
+		Routing.RegisterRoute(nameof(TipCalc), typeof(TipCalc));
+		Routing.RegisterRoute(nameof(TipCalc2), typeof(TipCalc2));
+    }
 }

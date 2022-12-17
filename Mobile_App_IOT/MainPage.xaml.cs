@@ -37,5 +37,14 @@ public partial class MainPage : ContentPage
         await Shell.Current.GoToAsync(nameof(NotePage));
     }
 
+    private async void ButtonTipCalc(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(TipCalc));
+    }
+    
+    private async void ButtonTipCalc2(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(TipCalc2));
+    }
 }
 

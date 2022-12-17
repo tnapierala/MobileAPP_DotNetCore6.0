@@ -64,7 +64,7 @@
                 VerticalOptions="Center"
                 Orientation="Horizontal"
                 Spacing="70"
-                Margin="0,30,0,30">
+                Margin="0,30,0,0">
 
                 <Button
                     x:Name="ButtonViewNotePage"
@@ -73,8 +73,28 @@
                     HorizontalOptions="Center" />
 
                 <Button
-                    x:Name="EmptyButton"
-                    Text="EmptyButton"
+                    x:Name="ButtonViewTipCalc"
+                    Text="TipCalc"
+                    Clicked="ButtonTipCalc"
+                    HorizontalOptions="Center" />
+
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Orientation="Horizontal"
+                Spacing="70"
+                Margin="0,30,0,30">
+
+                <Button
+                    x:Name="ButtonViewTipCalc2"
+                    Text="TipCalc2"
+                    Clicked="ButtonTipCalc2"
+                    HorizontalOptions="Center" />
+
+                <Button
+                    x:Name="EmptyButt"
+                    Text="EmptyButt"
                     HorizontalOptions="Center" />
 
             </StackLayout>
