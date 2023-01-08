@@ -61,6 +61,9 @@
 	  <Compile Update="CallTranslator.xaml.cs">
 	    <DependentUpon>CallTranslator.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="StandardTipCalc.xaml.cs">
+	    <DependentUpon>StandardTipCalc.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="TipCalc2.xaml.cs">
 	    <DependentUpon>TipCalc2.xaml</DependentUpon>
 	  </Compile>
@@ -77,6 +80,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="CallTranslator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="StandardTipCalc.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TipCalc2.xaml">

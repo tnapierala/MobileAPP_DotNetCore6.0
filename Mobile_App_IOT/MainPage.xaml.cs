@@ -1,10 +1,14 @@
-﻿namespace Mobile_App_IOT;
+﻿using Color = Microsoft.Maui.Graphics.Color;
+
+namespace Mobile_App_IOT;
 
 public partial class MainPage : ContentPage
 {
+    private Color buttonColorText = Colors.White;
     public MainPage()
     {
         InitializeComponent();
+        OnDark();
     }
     //First Build App 
     int count1 = 0;
@@ -19,6 +23,11 @@ public partial class MainPage : ContentPage
             CounterBtn.Text = $" I catch U on clicked button a {count1} times XD";
 
         SemanticScreenReader.Announce(CounterBtn.Text);
+    }
+
+    void OnDark()
+    {
+        Resources["buttonColorText"] = buttonColorText;
     }
 
     //Routing
@@ -46,5 +55,10 @@ public partial class MainPage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(TipCalc2));
     }
+    private async void ButtonStandardTipCalc(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(StandardTipCalc));
+    }
+    
 }
 
